@@ -1,6 +1,6 @@
 # Handmade LSTM
 
-This is an LSTM implementation similar to `torch.nn.LSTMCell`
+This is a LSTM implementation similar to `torch.nn.LSTMCell`
 with only using basic components of pytorch. The goal of this project
 is to offer clean code that is easy to inspect and extend while retaining
 competitive performance. Arguably, it offers the most clean code that
