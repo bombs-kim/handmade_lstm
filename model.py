@@ -7,7 +7,9 @@ from torch import nn
 # TODO: Add dropout functionality
 
 class LstmCell(nn.Module):
-    """input is not a sequence, but a single timestep with a batch dimension"""
+    """
+    LSTMCell receives a single timestep, not a sequence as an input
+    """
     def __init__(self, input_size, output_size, bias=True, dropout=0.0):
         super().__init__()
         self.output_size = output_size
@@ -43,4 +45,5 @@ class LstmCell(nn.Module):
         b_cell = b_output * torch.tanh(s_cell)
 
         self.s_cell_prev, self.b_cell_prev = s_cell, b_cell
+        # Note that cell state is only internally stored without being returned
         return b_cell
